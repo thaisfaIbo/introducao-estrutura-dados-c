@@ -1,46 +1,67 @@
 /*
  * Thaís Falbo - 2019
- * Script para pegar valores positivos
+ * Script para pegar valores(inteiros ou reais) positivos
  * e exibir mensagem de erro quando não é válido
- * TODO: Refatorar código repetido
  */
 #include <stdio.h>
+#include <limits.h>
+#include <float.h>
 
-int get_int() {
-  // input    - o dito input do usuario
-  // isNumber - usuario digitou um numero?
-  // garbage  - coleta garbage characters como newline
-  int intNumber, isNumber, garbage;
+/*
+ * UTILS
+ */
+static void limparBuffer(void) {
+  char c;
+  while((c = getchar()) != EOF && c != '\n');
+}
 
-  isNumber = scanf("%d", &intNumber);
+/*
+ * FUNCTIONS
+ */
+int get_int(void) {
+  int intNumber;
 
-  while(isNumber != 1 || intNumber <= 0) {
-    while((garbage = getchar()) != EOF && garbage != '\n');
+  int isSuccess = scanf("%d", &intNumber);
+
+  while((isSuccess != 1 || intNumber <= 0) ||
+        (intNumber > INT_MAX || intNumber < INT_MIN)) {
+    limparBuffer();
     printf("O número digitado é negativo ou igual a zero\n");
     printf("Por favor, digite um número válido: ");
-    isNumber = scanf("%d", &intNumber);
+    isSuccess = scanf("%d", &intNumber);
   }
 
   return intNumber;
 }
 
-double get_double() {
-  int isNumber, garbage;
+double get_double(void) {
   double doubleNumber;
 
-  isNumber = scanf("%lf", &doubleNumber);
+  int isSuccess = scanf("%lf", &doubleNumber);
 
-  while(isNumber != 1 || doubleNumber <= 0.0) {
-    while((garbage = getchar()) != EOF && garbage != '\n');
+  while((isSuccess != 1 || doubleNumber <= 0.0) ||
+        (doubleNumber > DBL_MAX || doubleNumber < DBL_MIN)) {
+    limparBuffer();
     printf("O número digitado é negativo ou igual a zero\n");
     printf("Por favor, digite um número válido: ");
-    isNumber = scanf("%lf", &doubleNumber);
+    isSuccess = scanf("%lf", &doubleNumber);
   }
 
   return doubleNumber;
 }
 
-float get_float() {
-  float input = get_double();
-  return input;
+float get_float(void) {
+  float floatNumber;
+
+  int isSuccess = scanf("%f", &floatNumber);
+
+  while((isSuccess != 1 || floatNumber <= 0.0f) ||
+        (floatNumber > FLT_MAX || floatNumber < FLT_MIN)) {
+    limparBuffer();
+    printf("O número digitado é negativo ou igual a zero\n");
+    printf("Por favor, digite um número válido: ");
+    isSuccess = scanf("%f", &floatNumber);
+  }
+
+  return floatNumber;
 }
