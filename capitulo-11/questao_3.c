@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int mais_proximo(int tamanho_vetor, int *vetor, int elemento)
-{
+int mais_proximo(int tamanho_vetor, int *vetor, int elemento) {
   int ini = 0;
   int fim = tamanho_vetor - 1;
 
-  while (ini <= fim)
-  {
+  while (ini <= fim) {
     int meio = (ini + fim) / 2;
 
     if (abs(elemento - vetor[meio]) <= 2)

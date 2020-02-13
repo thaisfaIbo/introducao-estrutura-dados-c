@@ -7,14 +7,14 @@ struct aluno {
   float nota;
 };
 
-int compara(Aluno *a, Aluno* b) {
-  if (strcmp(a->nome, b->nome) > 0) 
+int compara(Aluno *a, Aluno *b) {
+  if (strcmp(a->nome, b->nome) > 0)
     return 1;
-  else 
+  else
     return 0;
 }
 
-void troca (Aluno *a, Aluno *b) {
+void troca(Aluno *a, Aluno *b) {
   Aluno tmp = *a;
   *a = *b;
   *b = tmp;
@@ -25,12 +25,13 @@ void ordem_alfabetica(int tamanho_vetor, Aluno *v) {
     int teveTroca = 0;
 
     for (int j = 0; j < i; j++) {
-      if (compara(&v[j], &v[j+1])) {
-        troca(&v[j], &v[j+1]);
+      if (compara(&v[j], &v[j + 1])) {
+        troca(&v[j], &v[j + 1]);
         teveTroca = 1;
       }
     }
 
-    if (!teveTroca) return;
+    if (!teveTroca)
+      return;
   }
 }
