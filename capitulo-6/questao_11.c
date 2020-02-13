@@ -4,7 +4,7 @@
 int triangular_inferior(double A[][N]) {
   for (int i = 0; i < N; ++i) {
     for (int j = i + 1; j < N; ++j) {
-      if(A[i][j] != 0)
+      if (A[i][j] != 0)
         return 0;
     }
   }
@@ -12,8 +12,6 @@ int triangular_inferior(double A[][N]) {
 }
 
 int main(void) {
-  double A[N][N] = {{1, 0, 0},
-                    {1, 2, 0},
-                    {1, 2, 3}};
+  double A[N][N] = {{1, 0, 0}, {1, 2, 0}, {1, 2, 3}};
   triangular_inferior(A);
 }

@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "../input.c"
+#include <stdio.h>
 
 int fib(int num);
 void funcaoA(int n, int x, int *pertence);
@@ -28,7 +28,7 @@ void funcaoA(int n, int x, int *pertence) {
     int termo = fib(i);
     printf("%d ", termo);
 
-    if(termo == x)
+    if (termo == x)
       *pertence = 1;
   }
 }

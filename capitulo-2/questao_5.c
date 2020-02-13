@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("Programa para calcular a menor quantidade de notas possível para um valor\n");
+  printf("Programa para calcular a menor quantidade de notas possível para um "
+         "valor\n");
 
   int valor;
 

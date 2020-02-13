@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "../random_array.c"
+#include <stdio.h>
 #define N 10
 
 float ponderada(int n, float *valores, float *pesos) {

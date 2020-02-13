@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "../input.c"
+#include <stdio.h>
 
 int mdc(int num1, int num2);
 int mdcTresNumeros(int num1, int num2, int num3);

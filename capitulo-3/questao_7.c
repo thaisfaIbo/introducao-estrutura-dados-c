@@ -22,15 +22,14 @@ int main(void) {
   // Papel(1) ganha de pedra(0)
   // Pedra(0) ganha de tesoura(2)
   // Tesoura(2) ganha de papel(1)
-  if ((usuario == 1 && computador == 0) ||
-      (usuario == 0 && computador == 2) ||
+  if ((usuario == 1 && computador == 0) || (usuario == 0 && computador == 2) ||
       (usuario == 2 && computador == 1)) {
-      printf("Você ganhou!\n");
-    } else if ( usuario == computador){
-      printf("Empate\n");
-    } else {
-      printf("Você perdeu!\n");
-    }
+    printf("Você ganhou!\n");
+  } else if (usuario == computador) {
+    printf("Empate\n");
+  } else {
+    printf("Você perdeu!\n");
+  }
 
   return 0;
 }

@@ -1,14 +1,16 @@
-#include <stdio.h>
 #include "../random_array.c"
+#include <stdio.h>
 #define N 10
 
-int pares(int n, int* vet) {
-  if (n == 0) return 0;
+int pares(int n, int *vet) {
+  if (n == 0)
+    return 0;
   return (vet[n] % 2 == 0 ? 1 : 0) + pares(n - 1, vet);
 }
 
-void inverte(int n, int* vet) {
-  if (n == 1) return;
+void inverte(int n, int *vet) {
+  if (n == 1)
+    return;
 
   int inicio = 0, final = n - 1, tmp;
   tmp = vet[inicio];
@@ -18,12 +20,12 @@ void inverte(int n, int* vet) {
 }
 
 float minimo(int n, float *vet) {
-  if (n == 1) return vet[0];
+  if (n == 1)
+    return vet[0];
 
   float subArr = minimo(n - 1, &vet[1]);
   return vet[0] < subArr ? vet[0] : subArr;
 }
-
 
 int main(void) {
   int vetor_1[N];
@@ -44,7 +46,6 @@ int main(void) {
   float vetor_3[N];
   random_float_array(N, vetor_3);
   printf("Menor valor: %.2f\n", minimo(N, vetor_3));
-
 
   return 0;
 }

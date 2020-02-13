@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int testa_PA(int n, int* v) {
+int testa_PA(int n, int *v) {
   int k;
   for (int i = 0; i < n; ++i) {
     k = v[i] - v[i - 1];
-    if(v[i] != v[0] + (i * k))
+    if (v[i] != v[0] + (i * k))
       return 0;
   }
   return k;

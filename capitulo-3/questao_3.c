@@ -12,7 +12,7 @@ int main(void) {
 
   float media = (p1 + p2) / 2.0;
   printf("Média Final: %.2f\n", media);
-  
+
   // Verifica se media é acima de 5.0
   // e se a nota da p1 e p2 é maior do que 3.0
   if (media >= 5.0 && (p1 + p2 >= 6.0)) {
@@ -20,7 +20,7 @@ int main(void) {
   } else {
     float p3;
     printf("Prova final\n");
-    
+
     printf("Digite a nota da P3: ");
     scanf("%f", &p3);
 

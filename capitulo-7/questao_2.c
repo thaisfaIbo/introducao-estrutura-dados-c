@@ -1,19 +1,19 @@
+#include "../random_array.c"
 #include <stdio.h>
 #include <stdlib.h>
-#include "../random_array.c"
 #define N 5
 
-void* aloca(size_t n) {
+void *aloca(size_t n) {
   void *v = malloc(n);
-  if(!v) {
+  if (!v) {
     perror("Erro:");
     exit(EXIT_FAILURE);
   }
   return v;
 }
 
-int *somente_pares (int n, int *v, int *npares) {
-  int *pares = (int*) aloca(*npares * sizeof(int));
+int *somente_pares(int n, int *v, int *npares) {
+  int *pares = (int *)aloca(*npares * sizeof(int));
   for (int i = 0, j = 0; i < n; ++i) {
     if (!(v[i] % 2)) {
       pares[j] = v[i];

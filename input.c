@@ -3,16 +3,17 @@
  * Script para pegar valores(inteiros ou reais) positivos
  * e exibir mensagem de erro quando não é válido
  */
-#include <stdio.h>
-#include <limits.h>
 #include <float.h>
+#include <limits.h>
+#include <stdio.h>
 
 /*
  * UTILS
  */
 static void limparBuffer(void) {
   char c;
-  while((c = getchar()) != EOF && c != '\n');
+  while ((c = getchar()) != EOF && c != '\n')
+    ;
 }
 
 /*
@@ -23,8 +24,8 @@ int get_int(void) {
 
   int isSuccess = scanf("%d", &intNumber);
 
-  while((isSuccess != 1 || intNumber <= 0) ||
-        (intNumber > INT_MAX || intNumber < INT_MIN)) {
+  while ((isSuccess != 1 || intNumber <= 0) ||
+         (intNumber > INT_MAX || intNumber < INT_MIN)) {
     limparBuffer();
     printf("O número digitado é negativo ou igual a zero\n");
     printf("Por favor, digite um número válido: ");
@@ -39,8 +40,8 @@ double get_double(void) {
 
   int isSuccess = scanf("%lf", &doubleNumber);
 
-  while((isSuccess != 1 || doubleNumber <= 0.0) ||
-        (doubleNumber > DBL_MAX || doubleNumber < DBL_MIN)) {
+  while ((isSuccess != 1 || doubleNumber <= 0.0) ||
+         (doubleNumber > DBL_MAX || doubleNumber < DBL_MIN)) {
     limparBuffer();
     printf("O número digitado é negativo ou igual a zero\n");
     printf("Por favor, digite um número válido: ");
@@ -55,8 +56,8 @@ float get_float(void) {
 
   int isSuccess = scanf("%f", &floatNumber);
 
-  while((isSuccess != 1 || floatNumber <= 0.0f) ||
-        (floatNumber > FLT_MAX || floatNumber < FLT_MIN)) {
+  while ((isSuccess != 1 || floatNumber <= 0.0f) ||
+         (floatNumber > FLT_MAX || floatNumber < FLT_MIN)) {
     limparBuffer();
     printf("O número digitado é negativo ou igual a zero\n");
     printf("Por favor, digite um número válido: ");

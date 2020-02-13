@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <math.h>
 #include "../input.c"
+#include <math.h>
+#include <stdio.h>
 
 int primo(int num);
 void funcaoA(void);
@@ -16,7 +16,7 @@ int primo(int num) {
   } else {
     // Se um número não é primo, pelo menos um dos seus
     // divisores é menor ou igual a sua raiz quadrada
-    int lim = (int) sqrt(num);
+    int lim = (int)sqrt(num);
 
     // O loop começa no 3 pq já testamos se é menor ou igual a 2
     // e o i é incrementado em 2 pq queremos números ímpares
@@ -36,7 +36,7 @@ void funcaoA(void) {
 
   printf("Números primos menores que %d:\n", x);
   for (int i = 2; i < x; ++i) {
-    if(primo(i)) {
+    if (primo(i)) {
       printf("%d\n", i);
     }
   }

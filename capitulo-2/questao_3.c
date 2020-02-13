@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("Programa para calcular o tempo em formato hora : minuto : segundo através da quantidade de segundos totais\n");
+  printf("Programa para calcular o tempo em formato hora : minuto : segundo "
+         "através da quantidade de segundos totais\n");
 
   float totalSegundos;
 

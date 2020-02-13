@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <math.h>
 #include "../input.c"
+#include <math.h>
+#include <stdio.h>
 
 float raiz(float num) {
   float x = num / 2;
@@ -15,7 +15,8 @@ float raiz(float num) {
 }
 
 int main(void) {
-  printf("Programa para calcular a raiz quadrada utilizando o método Babylon\n");
+  printf(
+      "Programa para calcular a raiz quadrada utilizando o método Babylon\n");
   printf("Digite um número: ");
   float num = get_float();
   float r = raiz(49);

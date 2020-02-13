@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "../random_array.c"
+#include <stdio.h>
 #define N 10
 
 float minimo(int n, float *vet) {

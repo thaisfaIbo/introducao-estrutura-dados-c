@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "../input.c"
+#include <stdio.h>
 
 double potenciacao(double base, int expoente);
 

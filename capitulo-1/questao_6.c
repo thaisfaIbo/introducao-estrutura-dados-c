@@ -19,7 +19,7 @@ int main(void) {
     }*/
 
     // Maneira 2
-    for (int i = b; i > 0 ; i--) {
+    for (int i = b; i > 0; i--) {
       sum += (a + i) + (b - i);
     }
 

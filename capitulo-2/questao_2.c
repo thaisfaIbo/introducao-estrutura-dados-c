@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("Programa para calcular o litro de gasolina no Brasil se aqui fosse adotado o mesmo preço cobrado nos Estados Unidos\n");
+  printf("Programa para calcular o litro de gasolina no Brasil se aqui fosse "
+         "adotado o mesmo preço cobrado nos Estados Unidos\n");
 
   double precoGalaoUSA, taxaConversao;
 

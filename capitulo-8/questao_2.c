@@ -1,17 +1,17 @@
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 
-int conta_vogais(char* str) {
+int conta_vogais(char *str) {
   int vowels = 0;
   for (int i = 0; i < strlen(str); ++i) {
-    switch(tolower(str[i])) {
-      case 'a':
-      case 'e':
-      case 'i':
-      case 'o':
-      case 'u':
-        vowels++;
+    switch (tolower(str[i])) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+      vowels++;
     }
   }
   return vowels;

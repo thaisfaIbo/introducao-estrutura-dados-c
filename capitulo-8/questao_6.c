@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void roda_string(char* str) {
+void roda_string(char *str) {
   int len = strlen(str);
 
   if (len > 0) {

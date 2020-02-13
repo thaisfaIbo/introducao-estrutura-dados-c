@@ -15,7 +15,7 @@ int main(void) {
     printf("O computador escolheu par, logo você é ímpar\n");
   else
     printf("O computador escolheu ímpar, logo você é par\n");
-  
+
   // Gera um número de 1 a 10
   int computador = rand() % 10 + 1;
 

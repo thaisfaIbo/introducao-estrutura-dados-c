@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 int main(void) {
   printf("Programa para calcular o volume da esfera\n");

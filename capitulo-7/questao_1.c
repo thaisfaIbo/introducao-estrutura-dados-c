@@ -1,20 +1,19 @@
+#include "../random_array.c"
 #include <stdio.h>
 #include <stdlib.h>
-#include "../random_array.c"
 #define N 10
 
-
-void* aloca(size_t n) {
+void *aloca(size_t n) {
   void *v = malloc(n);
-  if(!v) {
+  if (!v) {
     perror("Erro:");
     exit(EXIT_FAILURE);
   }
   return v;
 }
 
-float* reverso(int n, float* vet) {
-  float *rev = (float*) aloca(n * sizeof(float));
+float *reverso(int n, float *vet) {
+  float *rev = (float *)aloca(n * sizeof(float));
   float tmp;
   for (int i = 0; i < n; ++i) {
     tmp = vet[i];

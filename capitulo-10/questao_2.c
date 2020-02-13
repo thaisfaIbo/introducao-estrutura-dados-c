@@ -3,8 +3,8 @@
 #define MEDIA 5
 
 int main(void) {
-  FILE* entrada = fopen("turma.txt", "rt");
-  FILE* saida = fopen("aprovados.txt", "wt");
+  FILE *entrada = fopen("turma.txt", "rt");
+  FILE *saida = fopen("aprovados.txt", "wt");
 
   if (!entrada || !saida) {
     fprintf(stderr, "Erro\n");

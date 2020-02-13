@@ -13,18 +13,17 @@ void escolherJogo(int *escolha);
  */
 void limparBuffer(void) {
   char c;
-  while((c = getchar()) != EOF && c != '\n');
+  while ((c = getchar()) != EOF && c != '\n')
+    ;
 }
 
-int gerarNumero(int min, int max) {
-  return (rand() % (max - min + 1) + min);
-}
+int gerarNumero(int min, int max) { return (rand() % (max - min + 1) + min); }
 
 void escolherJogo(int *escolha) {
   int eValido;
   eValido = scanf("%d", &*escolha);
 
-  while(eValido != 1 || (*escolha > 2 || *escolha < 1)) {
+  while (eValido != 1 || (*escolha > 2 || *escolha < 1)) {
     limparBuffer();
     printf("Número inválido, digite apenas 1 ou 2: ");
     eValido = scanf("%d", &*escolha);
@@ -39,7 +38,7 @@ void jogoA(void) {
   int adivinhacaoUsuario;
   int tentativas = 0;
 
-  while(1) {
+  while (1) {
     printf("\nAdvinhe um número de 1 a 1024: ");
     scanf("%d", &adivinhacaoUsuario);
     limparBuffer();
@@ -69,7 +68,7 @@ void jogoB(void) {
   int tentativas = 0;
   int usuario;
 
-  while(1) {
+  while (1) {
     printf("Computador: %d\n", adivinhacaoComputador);
     printf("O número fornecido é menor(-1), maior(1) ou igual(0)? ");
     scanf("%d", &usuario);

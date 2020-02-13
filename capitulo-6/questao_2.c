@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include "../random_array.c"
+#include <stdio.h>
 #define N 10
 
-void inverte(int n, int* vet) {
+void inverte(int n, int *vet) {
   int tmp;
   for (int i = 0; i < n; ++i) {
     tmp = vet[i];

@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
-void* aloca(size_t n) {
+void *aloca(size_t n) {
   void *p = malloc(n);
   if (!p) {
     perror("Erro");
@@ -11,10 +11,10 @@ void* aloca(size_t n) {
   return p;
 }
 
-char* retira_sufixo(char* s, int n) {
+char *retira_sufixo(char *s, int n) {
   int len = strlen(s);
   int novo_tamanho = len - n;
-  char* r = (char*) aloca(novo_tamanho * sizeof(char));
+  char *r = (char *)aloca(novo_tamanho * sizeof(char));
   for (int i = 0; i < novo_tamanho; ++i) {
     r[i] = s[i];
   }
